@@ -161,8 +161,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; color: var(
 
 .header__logo { display: flex; align-items: center; }
 .header__logo-img {
-  height: 58px; width: auto; object-fit: contain;
-  filter: saturate(3) contrast(1.5) brightness(0.82);
+  height: 60px; width: auto; object-fit: contain;
+  filter: saturate(4) contrast(1.8) brightness(0.75);
   transition: opacity 0.3s var(--ease);
 }
 .header__logo:hover .header__logo-img { opacity: 0.8; }
@@ -521,11 +521,15 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; color: var(
 
 /* ====== WHATSAPP ====== */
 .whatsapp-float {
-  position: fixed; bottom: 24px; right: 24px; width: 62px; height: 62px;
+  position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px;
   background: #25D366; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 6px 20px rgba(37,211,102,0.4); z-index: 99;
   transition: all 0.3s var(--ease-bounce);
+}
+@media (max-width: 768px) {
+  .whatsapp-float { bottom: 16px; right: 16px; width: 50px; height: 50px; }
+  .whatsapp-float svg { width: 24px; height: 24px; }
 }
 .whatsapp-float:hover { transform: scale(1.12) translateY(-3px); box-shadow: 0 10px 32px rgba(37,211,102,0.5); }
 
