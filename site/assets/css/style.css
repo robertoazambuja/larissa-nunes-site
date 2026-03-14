@@ -162,8 +162,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; color: var(
 .header__logo { display: flex; align-items: center; }
 .header__logo-img {
   height: 60px; width: auto; object-fit: contain;
-  filter: saturate(4) contrast(1.8) brightness(0.75);
-  transition: opacity 0.3s var(--ease);
+  filter: invert(30%) sepia(50%) saturate(500%) hue-rotate(230deg) brightness(0.85);
+  transition: filter 0.3s var(--ease);
+}
+.header__logo:hover .header__logo-img {
+  filter: invert(30%) sepia(50%) saturate(500%) hue-rotate(290deg) brightness(0.85);
 }
 .header__logo:hover .header__logo-img { opacity: 0.8; }
 
