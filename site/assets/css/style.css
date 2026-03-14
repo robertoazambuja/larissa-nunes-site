@@ -89,7 +89,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; color: var(
 .section { padding: 6rem 0; position: relative; }
 .section--white { background: var(--white); }
 .section--grape {
-  background: linear-gradient(135deg, var(--orchid-light) 0%, var(--baby-pink-light) 40%, var(--baby-blue-light) 100%);
+  background:
+    url('../img/pattern.png') repeat center / 300px,
+    linear-gradient(135deg, var(--orchid-light) 0%, var(--baby-pink-light) 40%, var(--baby-blue-light) 100%);
+  background-blend-mode: overlay;
 }
 .section--wave-top::before {
   content: ''; position: absolute; top: -1px; left: 0; right: 0; height: 60px;
@@ -159,19 +162,13 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; color: var(
 .header--scrolled { box-shadow: 0 4px 30px rgba(46,26,71,0.08); }
 .header__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
 
-.header__logo { display: flex; align-items: baseline; gap: 0.4rem; }
-.header__logo-ln {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.9rem; font-weight: 700;
-  color: var(--orchid); line-height: 1;
-  transition: color 0.3s var(--ease);
+.header__logo { display: flex; align-items: center; }
+.header__logo-img {
+  height: 48px; width: auto; object-fit: contain;
+  filter: saturate(2.2) contrast(1.3) brightness(0.88);
+  transition: opacity 0.3s var(--ease);
 }
-.header__logo-name {
-  font-family: var(--font-body); font-size: 1.1rem; font-weight: 500;
-  color: var(--ink); transition: color 0.3s var(--ease);
-}
-.header__logo:hover .header__logo-ln { color: var(--rose); }
-.header__logo:hover .header__logo-name { color: var(--ink-light); }
+.header__logo:hover .header__logo-img { opacity: 0.8; }
 
 .header__menu { display: flex; list-style: none; gap: 2rem; }
 .header__link {
@@ -195,7 +192,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; color: var(
   padding-top: calc(var(--header-h) + 1.5rem);
   padding-bottom: 2.5rem;
   position: relative; overflow: hidden;
-  background: var(--mist);
+  background:
+    url('../img/pattern.png') repeat center / 400px,
+    var(--mist);
+  background-blend-mode: soft-light;
 }
 /* Large organic blob — purple/pink dreamscape */
 .hero::before {
@@ -507,9 +507,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; color: var(
   background: linear-gradient(90deg, var(--rose), var(--baby-yellow), var(--baby-green), var(--baby-blue), var(--orchid));
 }
 .footer__inner { display: flex; align-items: flex-start; justify-content: space-between; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
-.footer__logo { display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.5rem; }
-.footer__ln { font-family: 'Dancing Script', cursive; font-size: 2.2rem; font-weight: 700; color: var(--orchid-light); line-height: 1; }
-.footer__name { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: white; }
+.footer__logo-img {
+  width: 80px; height: auto; object-fit: contain;
+  filter: brightness(0) invert(1); opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
 .footer__role, .footer__location { font-size: 0.82rem; }
 .footer__links { display: flex; flex-direction: column; gap: 0.5rem; }
 .footer__links a { color: rgba(255,255,255,0.65); font-size: 0.9rem; font-family: var(--font-display); font-weight: 600; transition: color 0.25s var(--ease); }
