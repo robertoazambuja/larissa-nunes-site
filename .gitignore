@@ -1,0 +1,15 @@
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude internal
+.claude/
+
+# SVGs gerados (não usados)
+site/assets/img/logo-principal.svg
+site/assets/img/submarca.svg

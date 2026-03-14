@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://larissanunes.com.br/sitemap.xml
