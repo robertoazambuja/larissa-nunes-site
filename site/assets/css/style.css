@@ -460,7 +460,18 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; color: var(
 .faq__answer { padding: 0 1.5rem 1.25rem; color: var(--ink-light); font-size: 0.95rem; line-height: 1.7; }
 
 /* ====== CONTATO ====== */
-.contato__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 3rem; }
+.contato__info { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 720px; margin: 0 auto 2.5rem; }
+.contato__info-card {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1.5rem; background: var(--white); border-radius: 1.25rem;
+  border: 1.5px solid var(--border);
+}
+.contato__info-card svg { flex-shrink: 0; color: var(--amber); margin-top: 2px; }
+.contato__info-card h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; }
+.contato__info-card p { font-size: 0.9rem; color: var(--ink-light); line-height: 1.5; }
+.contato__cta { text-align: center; margin-top: 2.5rem; }
+.contato__cta p { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--ink-light); margin-bottom: 1rem; }
+.contato__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 0; }
 .contato__card {
   display: flex; flex-direction: column; align-items: center; text-align: center;
   padding: 2rem 1.25rem; background: var(--white); border-radius: 1.25rem;
@@ -563,7 +574,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; color: var(
   .header__toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
   .header__toggle.active span:nth-child(2) { opacity: 0; }
   .header__toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
-  .servicos__grid, .difs__grid, .sinais__grid, .contato__grid, .steps__grid { grid-template-columns: 1fr; }
+  .servicos__grid, .difs__grid, .sinais__grid, .contato__grid, .contato__info, .steps__grid { grid-template-columns: 1fr; }
   .steps { padding: 2rem 1.5rem; }
   .sobre__credentials { grid-template-columns: 1fr; }
   .dif { flex-direction: column; text-align: center; align-items: center; }
