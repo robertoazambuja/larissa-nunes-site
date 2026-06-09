@@ -13,3 +13,6 @@ desktop.ini
 # SVGs gerados (não usados)
 site/assets/img/logo-principal.svg
 site/assets/img/submarca.svg
+
+# Arquivos-fonte da marca (Corel/PDF/PNG) — não fazem parte do deploy; ficam no OneDrive
+branding/
