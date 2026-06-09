@@ -14,19 +14,37 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://larissanunes.com.br/">
+  <meta property="og:site_name" content="Larissa Nunes — Neuro Psicopedagoga">
   <meta property="og:title" content="Larissa Nunes — Psicopedagoga em Cachoeirinha/RS">
   <meta property="og:description" content="Especialista em Desenvolvimento Infantil e Libras. Atendimento para TDAH, TEA, Dislexia e dificuldades de aprendizagem.">
   <meta property="og:image" content="https://larissanunes.com.br/assets/img/larissa.jpg">
+  <meta property="og:image:width" content="880">
+  <meta property="og:image:height" content="880">
+  <meta property="og:image:alt" content="Larissa Nunes, Neuro Psicopedagoga em Cachoeirinha/RS">
   <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Larissa Nunes — Psicopedagoga em Cachoeirinha/RS">
+  <meta name="twitter:description" content="Especialista em Desenvolvimento Infantil e Libras. Atendimento para TDAH, TEA, Dislexia e dificuldades de aprendizagem.">
+  <meta name="twitter:image" content="https://larissanunes.com.br/assets/img/larissa.jpg">
 
   <!-- Geo -->
   <meta name="geo.region" content="BR-RS">
   <meta name="geo.placename" content="Cachoeirinha">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/img/submarca.png">
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#D4832E">
 
-  <!-- Fonts (loaded via CSS @import for Baloo 2 + DM Sans) -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap">
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -46,7 +64,7 @@
         "telephone": "+5551984723551",
         "email": "larinsilveira@hotmail.com",
         "image": "https://larissanunes.com.br/assets/img/larissa.jpg",
-        "logo": "https://larissanunes.com.br/assets/img/logo-principal.svg",
+        "logo": "https://larissanunes.com.br/assets/img/logo-principal.png",
         "address": {"@type": "PostalAddress", "streetAddress": "Av. Flores da Cunha, 1320 — Sala 301", "addressLocality": "Cachoeirinha", "addressRegion": "RS", "postalCode": "94910-002", "addressCountry": "BR"},
         "geo": {"@type": "GeoCoordinates", "latitude": -29.9511, "longitude": -51.0936},
         "areaServed": [
@@ -93,21 +111,30 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "O que faz uma psicopedagoga?", "acceptedAnswer": { "@type": "Answer", "text": "A psicopedagoga avalia, diagnostica e intervém nas dificuldades de aprendizagem, trabalhando com crianças que apresentam desafios na leitura, escrita, matemática, atenção e concentração." }},
-      { "@type": "Question", "name": "Quando devo procurar uma psicopedagoga para meu filho?", "acceptedAnswer": { "@type": "Answer", "text": "Quando seu filho apresentar dificuldades persistentes na escola, desmotivação, dificuldade de concentração, atraso na leitura ou escrita, ou quando houver suspeita de TDAH, TEA ou dislexia." }},
-      { "@type": "Question", "name": "Qual a diferença entre psicopedagoga e neuropsicopedagoga?", "acceptedAnswer": { "@type": "Answer", "text": "A neuropsicopedagoga utiliza conhecimentos da neurociência para compreender como o cérebro aprende, criando estratégias mais eficazes para potencializar o desenvolvimento cognitivo da criança." }},
-      { "@type": "Question", "name": "A Larissa Nunes atende crianças com TDAH e autismo?", "acceptedAnswer": { "@type": "Answer", "text": "Sim! Larissa trabalha com crianças que apresentam TDAH, TEA (autismo), dislexia, discalculia e outras condições, com atendimento adaptado às particularidades de cada criança." }},
-      { "@type": "Question", "name": "Como funciona a avaliação psicopedagógica?", "acceptedAnswer": { "@type": "Answer", "text": "Inclui entrevista com os pais, sessões de avaliação com a criança, análise do material escolar e contato com a escola. Ao final, é elaborado relatório com diagnóstico e plano de intervenção." }}
+      { "@type": "Question", "name": "O que faz uma psicopedagoga?", "acceptedAnswer": { "@type": "Answer", "text": "A psicopedagoga avalia, diagnostica e intervém nas dificuldades de aprendizagem. Trabalho com crianças que apresentam desafios na leitura, escrita, matemática, atenção e concentração, criando estratégias personalizadas." }},
+      { "@type": "Question", "name": "Quando devo procurar uma psicopedagoga para meu filho?", "acceptedAnswer": { "@type": "Answer", "text": "Quando seu filho apresentar dificuldades persistentes na escola, desmotivação, dificuldade de concentração, atraso na leitura ou escrita, ou quando houver suspeita de TDAH, TEA (autismo) ou dislexia. Quanto antes a intervenção, melhores os resultados." }},
+      { "@type": "Question", "name": "Qual a diferença entre psicopedagoga e neuropsicopedagoga?", "acceptedAnswer": { "@type": "Answer", "text": "A neuropsicopedagoga utiliza conhecimentos da neurociência para compreender como o cérebro aprende, criando estratégias mais eficazes e cientificamente embasadas para potencializar o desenvolvimento cognitivo da criança." }},
+      { "@type": "Question", "name": "Você atende crianças com TDAH, autismo e dislexia?", "acceptedAnswer": { "@type": "Answer", "text": "Sim! Trabalho com crianças que apresentam TDAH, TEA (Transtorno do Espectro Autista), dislexia, discalculia, disgrafia e outras condições que impactam a aprendizagem. O atendimento é adaptado às particularidades de cada criança." }},
+      { "@type": "Question", "name": "Como funciona a avaliação psicopedagógica?", "acceptedAnswer": { "@type": "Answer", "text": "Inclui entrevista com os pais (anamnese), sessões de avaliação com a criança, análise do material escolar e contato com a escola. Ao final, elaboro relatório com diagnóstico e plano de intervenção personalizado." }},
+      { "@type": "Question", "name": "Qual a duração e frequência das sessões?", "acceptedAnswer": { "@type": "Answer", "text": "Cada sessão dura em média 50 minutos. A frequência depende da necessidade — geralmente 1 a 2 vezes por semana. O tempo total varia conforme a evolução da criança." }},
+      { "@type": "Question", "name": "Qual a diferença entre psicopedagoga e psicóloga?", "acceptedAnswer": { "@type": "Answer", "text": "A psicóloga trabalha com questões emocionais, comportamentais e de saúde mental. A psicopedagoga foca no processo de aprendizagem e nas dificuldades escolares. Muitas vezes, o acompanhamento conjunto é o mais indicado para a criança." }},
+      { "@type": "Question", "name": "Com que idade devo levar meu filho na psicopedagoga?", "acceptedAnswer": { "@type": "Answer", "text": "Não existe idade mínima. A intervenção precoce (a partir dos 2-3 anos) é indicada para crianças com atraso no desenvolvimento. Para dificuldades escolares, a partir do momento em que a criança apresentar sinais persistentes já é hora de buscar avaliação." }},
+      { "@type": "Question", "name": "Você atende crianças com discalculia, disgrafia e síndrome de Down?", "acceptedAnswer": { "@type": "Answer", "text": "Sim! Além de TDAH, TEA e dislexia, também atendo crianças com discalculia (dificuldade com matemática), disgrafia (dificuldade na escrita), disortografia, síndrome de Down, atraso no desenvolvimento, deficiência intelectual e altas habilidades/superdotação." }}
     ]
   }
   </script>
 </head>
 <body>
+  <a href="#inicio" class="skip-link">Pular para o conteúdo</a>
+
   <!-- Header -->
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#inicio" class="header__logo">
-        <img src="assets/img/logo-principal.png" alt="Larissa Nunes — Neuro Psicopedagoga" class="header__logo-img">
+        <picture>
+          <source srcset="assets/img/logo-principal.webp" type="image/webp">
+          <img src="assets/img/logo-principal.png" alt="Larissa Nunes — Neuro Psicopedagoga" class="header__logo-img" width="418" height="160" fetchpriority="high">
+        </picture>
       </a>
       <nav class="header__nav" id="nav">
         <ul class="header__menu">
@@ -148,7 +175,10 @@
           </div>
         </div>
         <div class="hero__photo">
-          <img src="assets/img/larissa.jpg" alt="Larissa Nunes — Psicopedagoga sorrindo em seu consultório" width="440" height="440">
+          <picture>
+            <source srcset="assets/img/larissa.webp" type="image/webp">
+            <img src="assets/img/larissa.jpg" alt="Larissa Nunes — Psicopedagoga sorrindo em seu consultório" width="440" height="440" fetchpriority="high">
+          </picture>
         </div>
       </div>
     </section>
@@ -190,7 +220,10 @@
       <div class="container">
         <div class="sobre__inner">
           <div class="sobre__photo reveal">
-            <img src="assets/img/larissa.jpg" alt="Larissa Nunes, psicopedagoga e neuropsicopedagoga">
+            <picture>
+              <source srcset="assets/img/larissa.webp" type="image/webp">
+              <img src="assets/img/larissa.jpg" alt="Larissa Nunes, psicopedagoga e neuropsicopedagoga" width="880" height="880" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="sobre__content reveal">
             <div class="section__eyebrow">Sobre mim</div>
@@ -447,7 +480,10 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <img src="assets/img/submarca.png" alt="LN" class="footer__logo-img">
+        <picture>
+          <source srcset="assets/img/submarca.webp" type="image/webp">
+          <img src="assets/img/submarca.png" alt="Larissa Nunes" class="footer__logo-img" width="168" height="160" loading="lazy" decoding="async">
+        </picture>
         <p class="footer__role">Neuro Psicopedagoga</p>
         <p class="footer__location">Cachoeirinha/RS</p>
       </div>

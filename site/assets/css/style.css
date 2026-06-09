@@ -4,7 +4,7 @@
    Paleta e tipografia do manual de marca
    =================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+/* Fontes carregadas via <link> no <head> (preconnect) — evita render-blocking do @import */
 
 :root {
   /* Paleta da identidade visual */
@@ -35,7 +35,7 @@
   --frost: #F5EFEB;
   --ink: #4A3728;
   --ink-light: #7A6455;
-  --ink-muted: #A99888;
+  --ink-muted: #7B6857;
   --white: #FFFFFF;
   --border: #EBE0D8;
 
@@ -69,6 +69,15 @@ a:hover { color: var(--pink-deep); }
 h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; color: var(--ink); }
 ::selection { background: var(--pink-soft); color: var(--ink); }
 :focus-visible { outline: 3px solid var(--baby-blue); outline-offset: 3px; border-radius: 4px; }
+
+/* Skip link — acessibilidade */
+.skip-link {
+  position: absolute; left: 50%; top: -100px; transform: translateX(-50%);
+  z-index: 200; padding: 0.7rem 1.4rem; border-radius: 0 0 12px 12px;
+  background: var(--amber); color: #fff; font-family: var(--font-display);
+  font-weight: 700; font-size: 0.9rem; transition: top 0.25s var(--ease);
+}
+.skip-link:focus { top: 0; color: #fff; }
 
 /* ====== LAYOUT ====== */
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; }
