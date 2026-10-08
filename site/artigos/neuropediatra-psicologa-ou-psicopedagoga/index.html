@@ -36,7 +36,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"></noscript>
 
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/style.css?v=20261008b">
@@ -90,7 +92,7 @@
     <div class="container header__inner">
       <a href="/" class="header__logo">
         <picture>
-          <source srcset="/assets/img/logo-principal.webp" type="image/webp">
+          <source srcset="/assets/img/logo-principal-120.webp 1x, /assets/img/logo-principal.webp 2x" type="image/webp">
           <img src="/assets/img/logo-principal.png" alt="Larissa Nunes — Neuro Psicopedagoga" class="header__logo-img" width="418" height="160">
         </picture>
       </a>
@@ -174,7 +176,7 @@
     <div class="container footer__inner">
       <a href="/" class="footer__marca">
         <picture>
-          <source srcset="/assets/img/submarca.webp" type="image/webp">
+          <source srcset="/assets/img/submarca-120.webp 1x, /assets/img/submarca.webp 2x" type="image/webp">
           <img src="/assets/img/submarca.png" alt="Larissa Nunes" class="footer__logo-img" width="168" height="160" loading="lazy" decoding="async">
         </picture>
         <span>Larissa Nunes<br><small>Neuropsicopedagoga</small></span>
