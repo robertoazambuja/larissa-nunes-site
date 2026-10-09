@@ -179,4 +179,46 @@
       if (b) b.style.viewTransitionName = 'bloco-servico';
     });
   });
+  // Aviso de cookies (LGPD): o Google Analytics só grava cookies depois do "Aceitar"
+  var escolha = null;
+  try { escolha = localStorage.getItem('ln-cookies'); } catch (e) {}
+  if (!escolha && typeof window.gtag === 'function') {
+    var aviso = document.createElement('div');
+    aviso.className = 'cookies';
+    aviso.setAttribute('role', 'region');
+    aviso.setAttribute('aria-label', 'Aviso de cookies');
+    aviso.innerHTML = '<p>Uso cookies do Google Analytics para entender como o site é visitado. <a href="/privacidade/">Saiba mais</a></p>' +
+      '<div class="cookies__botoes"><button type="button" class="btn btn--contorno" data-escolha="recusado">Recusar</button>' +
+      '<button type="button" class="btn btn--acao" data-escolha="aceito">Aceitar</button></div>';
+    aviso.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-escolha]');
+      if (!b) return;
+      var v = b.getAttribute('data-escolha');
+      try { localStorage.setItem('ln-cookies', v); } catch (err) {}
+      if (v === 'aceito') window.gtag('consent', 'update', { analytics_storage: 'granted' });
+      aviso.remove();
+    });
+    document.body.appendChild(aviso);
+  }
+
+  // Eventos para o Analytics: contatos pelo WhatsApp e download do PDF de palestras
+  function evento(nome, dados) {
+    if (typeof window.gtag === 'function') window.gtag('event', nome, dados || {});
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var secao = a.closest('section[id], header, footer');
+    var local = secao ? (secao.id || secao.tagName.toLowerCase()) : 'pagina';
+    if (a.id === 'sinais-botao') {
+      evento('sinais_whatsapp', { quantidade: document.querySelectorAll('.sinal[aria-pressed="true"]').length });
+    } else if (href.indexOf('wa.me/') !== -1) {
+      evento('contato_whatsapp', { local: local, pagina: location.pathname });
+    } else if (/\.pdf($|\?)/.test(href)) {
+      evento('download_pdf', { arquivo: href.split('/').pop() });
+    } else if (href.indexOf('hotmart.com') !== -1) {
+      evento('clique_guia_desfralde', { pagina: location.pathname });
+    }
+  });
 })();

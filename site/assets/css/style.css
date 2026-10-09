@@ -457,3 +457,25 @@ p { max-width: 68ch; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* ====== LINHA DO ANO ESCOLAR (página de palestras) ====== */
+.ano { display: grid; grid-template-columns: repeat(12, 1fr); gap: 6px; margin: 0.5rem 0 1.25rem; }
+.mes { text-align: center; }
+.mes span { display: block; font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; color: var(--tinta-suave); margin-bottom: 6px; }
+.mes i { display: block; height: 16px; border-radius: 5px; background: var(--linha); }
+.mes.marca-l i { background: var(--lilas); box-shadow: inset 0 -4px 0 var(--lilas-borda); }
+.mes.marca-c i { background: var(--ceu); box-shadow: inset 0 -4px 0 var(--ceu-borda); }
+.mes.marca-r i { background: var(--rosa); box-shadow: inset 0 -4px 0 var(--rosa-borda); }
+.mes.agora i { background: repeating-linear-gradient(-45deg, var(--sol), var(--sol) 5px, #fff6d6 5px, #fff6d6 10px); box-shadow: inset 0 -4px 0 var(--sol-borda); }
+.mes[class*="marca"] span, .mes.agora span { color: var(--tinta); }
+@media (max-width: 480px) { .ano { gap: 3px; } .mes span { font-size: 0.62rem; } }
+
+/* ====== AVISO DE COOKIES ====== */
+.cookies {
+  position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 120; max-width: 560px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; padding: 1rem 1.15rem;
+  background: var(--branco); border-radius: 18px; box-shadow: 0 10px 30px rgba(62,47,74,0.18), inset 0 0 0 2px var(--linha);
+}
+.cookies p { flex: 1 1 260px; font-size: 0.93rem; color: var(--tinta-suave); }
+.cookies__botoes { display: flex; gap: 0.6rem; }
+.cookies .btn { padding: 0.55rem 1rem; font-size: 0.9rem; }
