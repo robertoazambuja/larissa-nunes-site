@@ -149,6 +149,18 @@
 .st-fim { padding: clamp(4rem, 9vw, 6rem) 0; background: var(--st-rosa-claro); }
 .st-fim .st-lema { margin: 0 auto 2rem; max-width: 30ch; }
 
+/* Aviso de cookies em faixa baixa no celular, para não cobrir o botão da lista */
+@media (max-width: 720px) {
+  .st .cookies {
+    left: 0.5rem; right: 0.5rem; bottom: 0.5rem; max-width: none;
+    flex-wrap: nowrap; gap: 0.6rem; padding: 0.55rem 0.6rem 0.55rem 0.9rem; border-radius: 14px;
+  }
+  .st .cookies p { flex: 1 1 auto; font-size: 0.78rem; line-height: 1.35; }
+  .st .cookies__botoes { gap: 0.4rem; flex-shrink: 0; }
+  .st .cookies .btn { padding: 0.45rem 0.7rem; font-size: 0.8rem; box-shadow: none; }
+  .st .cookies .btn--contorno { box-shadow: inset 0 0 0 1.5px var(--lilas-borda); }
+}
+
 @media (max-width: 860px) {
   .st-form-grade { grid-template-columns: 1fr; }
 }
