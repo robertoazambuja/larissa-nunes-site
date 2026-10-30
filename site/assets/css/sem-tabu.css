@@ -1,25 +1,25 @@
 /* ===================================
    Sem Tabu — página do encontro (larissanunes.com.br/sem-tabu/)
-   Identidade própria do evento: linho off-white, rosa antigo, malva, ameixa e sálvia;
-   Fraunces nos títulos e DM Sans no corpo. A fita desatada é a assinatura das peças.
+   Identidade própria do evento: fundo rosado claro, títulos em framboesa suave e uma rosa
+   delicada, no estilo pedido pela Larissa; Fraunces nos títulos e DM Sans no corpo.
    Usa o header, o rodapé e o FAQ do style.css; o resto vive aqui, sob body.st
    =================================== */
 
 .st {
-  --st-ameixa: #4E2639;
-  --st-malva: #8E5A72;
-  --st-malva-escura: #74445B;
-  --st-rosa: #C98B8B;
-  --st-rosa-claro: #EBD3CF;
-  --st-salvia: #5F7459;
-  --st-linho: #F4EDE6;
-  --st-linho-claro: #FAF6F2;
-  --st-tinta: #3B2430;
+  --st-ameixa: #9C3155;
+  --st-malva: #B4506F;
+  --st-malva-escura: #8A2C4C;
+  --st-rosa: #E7B3BE;
+  --st-rosa-claro: #F6E1E3;
+  --st-salvia: #4F6E47;
+  --st-linho: #FBF1F0;
+  --st-linho-claro: #FDF8F7;
+  --st-tinta: #4A3840;
   --st-serif: 'Fraunces', Georgia, serif;
   background: var(--st-linho-claro);
   color: var(--st-tinta);
 }
-.st .header { background: rgba(250, 246, 242, 0.92); }
+.st .header { background: rgba(253, 248, 247, 0.92); }
 .st ::selection { background: var(--st-rosa-claro); }
 .st main a { color: var(--st-malva-escura); }
 
@@ -52,9 +52,9 @@
 .st-nota { font-size: 0.95rem; color: var(--st-salvia); font-weight: 500; margin-top: 1.5rem; }
 
 /* Marca */
-.st-marca { font-family: var(--st-serif); font-weight: 300; color: var(--st-ameixa); line-height: 0.82; margin: 0.4rem 0 1.6rem; }
-.st-marca__sem { display: block; font-style: italic; color: var(--st-malva); font-size: clamp(2.2rem, 5vw, 3.4rem); margin-left: 0.1em; }
-.st-marca__tabu { display: block; font-size: clamp(5.5rem, 14vw, 9.5rem); letter-spacing: -0.035em; }
+.st-marca { font-family: var(--st-serif); font-weight: 400; color: var(--st-ameixa); line-height: 0.9; margin: 0.4rem 0 1.6rem; font-variation-settings: 'opsz' 144; letter-spacing: 0.02em; }
+.st-marca__sem { display: block; font-size: clamp(4.2rem, 10vw, 7rem); }
+.st-marca__tabu { display: block; font-size: clamp(4.2rem, 10vw, 7rem); }
 
 /* Topo */
 .st-hero { position: relative; min-height: min(92vh, 860px); padding: calc(var(--header-h) + 3.5rem) 0 4rem; display: flex; align-items: center; overflow: hidden; background: var(--st-linho); }
@@ -65,7 +65,7 @@
 .st-fatos { list-style: none; display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 2rem; }
 .st-fatos li {
   display: flex; flex-direction: column; padding: 0.8rem 1.3rem; border-radius: 18px; line-height: 1.35;
-  background: rgba(250, 246, 242, 0.85); box-shadow: inset 0 0 0 1.5px var(--st-rosa);
+  background: rgba(253, 248, 247, 0.88); box-shadow: inset 0 0 0 1.5px var(--st-rosa);
 }
 .st-fatos strong { font-family: var(--st-serif); font-weight: 400; font-size: 1.2rem; color: var(--st-ameixa); }
 .st-fatos span { font-size: 0.92rem; color: var(--st-malva-escura); }
@@ -143,7 +143,7 @@
 .st-form--enviado .st-campo, .st-form--enviado .st-aceite, .st-form--enviado button { display: none; }
 
 /* FAQ e fechamento */
-.st .faq__item { background: var(--st-linho-claro); box-shadow: inset 0 0 0 1.5px #E2CFCA; }
+.st .faq__item { background: var(--st-linho-claro); box-shadow: inset 0 0 0 1.5px #EED3D7; }
 .st .faq__item[open] { box-shadow: inset 0 0 0 1.5px var(--st-rosa); }
 .st .faq__question { color: var(--st-ameixa); }
 .st-fim { padding: clamp(4rem, 9vw, 6rem) 0; background: var(--st-rosa-claro); }
@@ -153,8 +153,10 @@
   .st-form-grade { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
-  .st-hero { min-height: auto; align-items: flex-start; padding-bottom: 58vw; }
-  .st-hero__arte img { object-position: center bottom; }
+  .st-hero { min-height: auto; flex-direction: column; align-items: stretch; padding-bottom: 0; background: linear-gradient(180deg, #FBEDEE 0%, #F8E4E6 100%); }
+  .st-hero__inner { order: 1; }
+  .st-hero__arte { order: 2; position: relative; inset: auto; height: 92vw; margin-top: 1rem; }
+  .st-hero__arte img { object-position: 30% 82%; }
   .st-duas { grid-template-columns: minmax(0, 320px); }
   .st-hero .st-btn { width: 100%; }
   .st-form .st-btn--claro { width: 100%; }
