@@ -43,7 +43,7 @@
     var primeiro = d.nome.split(' ')[0];
     p.textContent = viaWhats
       ? 'Falta só um passo, ' + primeiro + ': envie a mensagem que abrimos no WhatsApp.'
-      : 'Pronto, ' + primeiro + '! Você está na lista. Vamos avisar pelo WhatsApp assim que a data e o local forem confirmados.';
+      : 'Pronto, ' + primeiro + '! Você está na lista. Vamos falar com você pelo WhatsApp. Até sábado, 7 de novembro!';
     aviso.appendChild(p);
     if (viaWhats) {
       var a = document.createElement('a');
