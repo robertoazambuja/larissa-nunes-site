@@ -468,7 +468,7 @@ p { max-width: 68ch; }
 .mes.marca-r i { background: var(--rosa); box-shadow: inset 0 -4px 0 var(--rosa-borda); }
 .mes.agora i { background: repeating-linear-gradient(-45deg, var(--sol), var(--sol) 5px, #fff6d6 5px, #fff6d6 10px); box-shadow: inset 0 -4px 0 var(--sol-borda); }
 .mes[class*="marca"] span, .mes.agora span { color: var(--tinta); }
-@media (max-width: 480px) { .ano { gap: 3px; } .mes span { font-size: 0.62rem; } }
+@media (max-width: 480px) { .ano { gap: 3px; } .mes span { font-size: 0.75rem; } }
 
 /* ====== AVISO DE COOKIES ====== */
 .cookies {
