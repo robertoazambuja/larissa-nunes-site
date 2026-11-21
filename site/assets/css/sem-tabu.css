@@ -173,3 +173,18 @@
   .st-hero .st-btn { width: 100%; }
   .st-form .st-btn--claro { width: 100%; }
 }
+
+/* Galeria "como foi" (depois do encontro de 07/11/2026) */
+.st-galeria { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; max-width: 980px; margin: 0 auto; }
+.st-foto { margin: 0; }
+.st-foto img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 1.25rem; box-shadow: 0 14px 30px -18px rgba(78, 38, 57, 0.55); }
+.st-foto figcaption { font-size: 0.95rem; color: var(--st-tinta); margin-top: 0.6rem; }
+.st-foto--larga { grid-column: 1 / -1; }
+.st-foto--larga img { aspect-ratio: 16 / 10; object-position: 50% 35%; }
+.st-campanha { margin-top: 2rem; }
+.st-campanha[hidden] { display: none; }
+.st main .aviso-campanha { color: var(--tinta); }
+@media (max-width: 720px) {
+  .st-galeria { grid-template-columns: 1fr; }
+  .st-foto--larga img { aspect-ratio: 4 / 5; }
+}
