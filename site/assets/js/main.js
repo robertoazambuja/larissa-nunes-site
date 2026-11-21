@@ -201,6 +201,15 @@
     document.body.appendChild(aviso);
   }
 
+  // Campanhas com prazo: [data-ate] some depois da data; [data-depois] aparece depois da data
+  var agora = Date.now();
+  document.querySelectorAll('[data-ate]').forEach(function (el) {
+    if (agora > Date.parse(el.getAttribute('data-ate'))) el.hidden = true;
+  });
+  document.querySelectorAll('[data-depois]').forEach(function (el) {
+    if (agora > Date.parse(el.getAttribute('data-depois'))) el.hidden = false;
+  });
+
   // Eventos para o Analytics: contatos pelo WhatsApp e download do PDF de palestras
   function evento(nome, dados) {
     if (typeof window.gtag === 'function') window.gtag('event', nome, dados || {});
@@ -214,7 +223,10 @@
     if (a.id === 'sinais-botao') {
       evento('sinais_whatsapp', { quantidade: document.querySelectorAll('.sinal[aria-pressed="true"]').length });
     } else if (href.indexOf('wa.me/') !== -1) {
-      evento('contato_whatsapp', { local: local, pagina: location.pathname });
+      evento('contato_whatsapp', { local: local, pagina: location.pathname,
+        campanha: location.pathname.indexOf('/black-friday/') === 0 ? 'black_friday_2026' : 'nenhuma' });
+    } else if (a.classList.contains('aviso-campanha')) {
+      evento('clique_campanha', { campanha: 'black_friday_2026', pagina: location.pathname });
     } else if (/\.pdf($|\?)/.test(href)) {
       evento('download_pdf', { arquivo: href.split('/').pop() });
     } else if (href.indexOf('hotmart.com') !== -1) {
