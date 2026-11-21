@@ -504,3 +504,26 @@ p { max-width: 68ch; }
 .plano__freq { color: var(--tinta-suave); font-weight: 500; }
 .plano__preco { font-family: var(--font-display); font-weight: 700; font-size: 2.2rem; color: var(--ambar-escuro); margin: 0.6rem 0 0.2rem; }
 .plano__desc { font-size: 0.9rem; color: var(--tinta-suave); }
+
+/* ====== CALENDÁRIO DE FUNCIONAMENTO ====== */
+.calendario__resumo { list-style: none; max-width: 640px; margin: 0 auto 2rem; display: grid; gap: 0.4rem; text-align: center; }
+.calendario__resumo li { max-width: none; }
+.calendario__meses { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; max-width: 980px; margin: 0 auto; }
+.cal__mes { width: 100%; border-collapse: separate; border-spacing: 3px; background: #fff; border-radius: 1.25rem; padding: 0 0.75rem 0.9rem; box-shadow: 0 10px 24px -18px rgba(62, 47, 74, 0.45); overflow: hidden; }
+.cal__mes caption { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; padding: 0.7rem; border-radius: 1.25rem 1.25rem 0 0; caption-side: top; }
+.cal__mes--12 caption { background: var(--menta); } .cal__mes--1 caption { background: var(--rosa); } .cal__mes--2 caption { background: var(--ceu); }
+.cal__mes th { font-size: 0.8rem; color: #B0315F; padding: 0.45rem 0 0.2rem; }
+.cal__mes th abbr { text-decoration: none; }
+.cal__mes td { text-align: center; font-weight: 500; font-size: 0.95rem; height: 2.1rem; border-radius: 0.6rem; }
+.cal__domingo { color: #B0315F; }
+.cal__dia--feriado { background: var(--rosa); box-shadow: inset 0 -3px 0 var(--rosa-borda); font-weight: 700; }
+.cal__dia--recesso { background: var(--sol); }
+.cal__dia--programa { background: #E3F2FA; }
+.cal__dia--ferias { background: var(--menta); }
+.cal__dia--retorno { background: var(--lilas); box-shadow: inset 0 -3px 0 var(--lilas-borda); font-weight: 700; }
+.calendario__legenda { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem 1.5rem; margin: 1.5rem auto 0; font-size: 0.95rem; }
+.calendario__legenda li { display: flex; align-items: center; gap: 0.5rem; max-width: none; }
+.cal__cor { width: 1.2rem; height: 1.2rem; border-radius: 0.35rem; display: inline-block; }
+.texto .calendario__resumo { text-align: left; margin-left: 0; }
+.texto .cal__mes caption { font-size: 1.05rem; }
+[data-ate][hidden] { display: none !important; }
