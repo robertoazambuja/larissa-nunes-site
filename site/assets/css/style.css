@@ -527,3 +527,4 @@ p { max-width: 68ch; }
 .texto .calendario__resumo { text-align: left; margin-left: 0; }
 .texto .cal__mes caption { font-size: 1.05rem; }
 [data-ate][hidden] { display: none !important; }
+.calendario__baixar { text-align: center; margin: 1.25rem auto 0; font-weight: 700; }
