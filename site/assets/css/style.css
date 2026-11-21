@@ -494,3 +494,13 @@ p { max-width: 68ch; }
 .campanha-arte { max-width: 420px; margin: 0 auto 2.5rem; }
 .campanha-arte img { border-radius: 1.25rem; box-shadow: 0 10px 30px rgba(62, 47, 74, 0.12); }
 .campanha-encerrada { background: var(--sol); border-radius: 1rem; padding: 1rem 1.25rem; margin-bottom: 2rem; }
+
+/* Planos de programa (Férias com Letras) */
+.planos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin: 1rem 0 1.5rem; }
+.plano { position: relative; background: #fff; border: 3px solid var(--linha); border-radius: 1.25rem; padding: 1.5rem 1.5rem 1.25rem; }
+.plano--destaque { border-color: var(--ambar); }
+.plano__selo { position: absolute; top: -0.9rem; right: 1.25rem; background: var(--ambar); color: #fff; font-size: 0.8rem; font-weight: 700; border-radius: 999px; padding: 0.2rem 0.8rem; }
+.texto .plano__nome { margin: 0 0 0.25rem; font-size: 1.4rem; }
+.plano__freq { color: var(--tinta-suave); font-weight: 500; }
+.plano__preco { font-family: var(--font-display); font-weight: 700; font-size: 2.2rem; color: var(--ambar-escuro); margin: 0.6rem 0 0.2rem; }
+.plano__desc { font-size: 0.9rem; color: var(--tinta-suave); }
